@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220926 08:30:07.806" rpa="false" schemaversion="3">
+<suite id="s1" name="testDemo1" source="C:\Users\danicola\PycharmProjects\pythonProject2\tests\testDemo1.robot">
+<test id="s1-t1" name="Validate Succesful Login" line="7">
+<kw name="open the browser with Keurig url">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=C:\\Users\\danicola\\PycharmProjects\\pythonProject2\\chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220926 08:30:07.965" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220926 08:30:07.965" endtime="20220926 08:30:09.162"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.keurig.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220926 08:30:09.163" level="INFO">Opening url 'https://www.keurig.com/'</msg>
+<status status="PASS" starttime="20220926 08:30:09.163" endtime="20220926 08:30:10.911"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:07.965" endtime="20220926 08:30:10.911"/>
+</kw>
+<kw name="wait until the coupon SignUpCoupon show">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:_tealiumModalBody</arg>
+<arg>7</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 08:30:10.912" endtime="20220926 08:30:16.239"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:10.911" endtime="20220926 08:30:16.240"/>
+</kw>
+<kw name="Fill up the coupon SignUpCoupon">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class:emailSignup</arg>
+<arg>dan@malinator.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 08:30:16.240" level="INFO">Typing text 'dan@malinator.com' into text field 'class:emailSignup'.</msg>
+<status status="PASS" starttime="20220926 08:30:16.240" endtime="20220926 08:30:16.313"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:popup_signupbutton</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220926 08:30:16.314" level="INFO">Clicking button 'id:popup_signupbutton'.</msg>
+<status status="PASS" starttime="20220926 08:30:16.313" endtime="20220926 08:30:16.461"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:16.240" endtime="20220926 08:30:16.461"/>
+</kw>
+<kw name="close the Thank You SignUpCoupon">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:_tealiumModalClose</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 08:30:16.461" level="INFO">Clicking element 'id:_tealiumModalClose'.</msg>
+<status status="PASS" starttime="20220926 08:30:16.461" endtime="20220926 08:30:16.585"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:16.461" endtime="20220926 08:30:16.585"/>
+</kw>
+<kw name="Click Account">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class:login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 08:30:16.586" level="INFO">Clicking element 'class:login'.</msg>
+<status status="PASS" starttime="20220926 08:30:16.586" endtime="20220926 08:30:16.655"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:16.585" endtime="20220926 08:30:16.656"/>
+</kw>
+<kw name="Fill the login Form">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class:floating-input</arg>
+<arg>dan@malinator.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 08:30:16.656" level="INFO">Typing text 'dan@malinator.com' into text field 'class:floating-input'.</msg>
+<status status="PASS" starttime="20220926 08:30:16.656" endtime="20220926 08:30:16.897"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:L_Password</arg>
+<arg>Poiu@1234</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 08:30:16.898" level="INFO">Typing password into text field 'id:L_Password'.</msg>
+<msg timestamp="20220926 08:30:16.938" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220926 08:30:17.049" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220926 08:30:16.898" endtime="20220926 08:30:17.049"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//button[contains(text(),'SIGN IN')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220926 08:30:17.050" level="INFO">Clicking button '//button[contains(text(),'SIGN IN')]'.</msg>
+<status status="PASS" starttime="20220926 08:30:17.050" endtime="20220926 08:30:17.189"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:16.656" endtime="20220926 08:30:17.190"/>
+</kw>
+<kw name="wait until it checks and display error message">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:css-gjfxul</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 08:30:17.190" endtime="20220926 08:30:17.641"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:17.190" endtime="20220926 08:30:17.641"/>
+</kw>
+<kw name="verify error message is correct">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${result}</var>
+<arg>class:css-gjfxul</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 08:30:17.656" level="INFO">${result} = Your username or password was incorrect.</msg>
+<status status="PASS" starttime="20220926 08:30:17.642" endtime="20220926 08:30:17.656"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${result}</arg>
+<arg>Your username or password was incorrect.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 08:30:17.656" endtime="20220926 08:30:17.656"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:17.642" endtime="20220926 08:30:17.656"/>
+</kw>
+<status status="PASS" starttime="20220926 08:30:07.964" endtime="20220926 08:30:17.656"/>
+</test>
+<doc>To validate the login form</doc>
+<status status="PASS" starttime="20220926 08:30:07.808" endtime="20220926 08:30:17.657"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testDemo1">testDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
